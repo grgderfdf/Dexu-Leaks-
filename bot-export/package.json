@@ -1,0 +1,18 @@
+{
+  "name": "dexu-leaks-bot",
+  "version": "1.0.0",
+  "description": "Bot de Discord para el servidor Dexu Leaks",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "pg": "^8.13.1",
+    "dotenv": "^16.4.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
