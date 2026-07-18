@@ -22,6 +22,7 @@ const client = new Client({
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMembers,
     GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.DirectMessages,
   ],
 });
 
@@ -48,6 +49,7 @@ client.on(Events.GuildCreate, async (guild) => {
 });
 
 client.on(Events.GuildMemberAdd, (member) => {
+  console.log(`[MemberAdd] Nuevo miembro: ${member.user.tag} en ${member.guild.name}`);
   handleGuildMemberAdd(member).catch((err) =>
     console.error(`[MemberAdd] Error: ${err.message}`),
   );
@@ -64,3 +66,4 @@ client.on(Events.Error, (err) => {
 });
 
 client.login(token);
+
